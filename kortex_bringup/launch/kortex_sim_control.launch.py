@@ -265,7 +265,7 @@ def launch_setup(context, *args, **kwargs):
         delay_rviz_after_joint_state_broadcaster_spawner,
         robot_traj_controller_spawner,
         robot_pos_controller_spawner,
-        robot_hand_controller_spawner,
+        # robot_hand_controller_spawner,
         gzserver,
         gzclient,
         gazebo_spawn_robot,
@@ -389,8 +389,8 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "gripper",
-            default_value="robotiq_2f_85",
-            choices=["robotiq_2f_85", "robotiq_2f_140", "gen3_lite_2f"],
+            default_value="",
+            # choices=["robotiq_2f_85", "robotiq_2f_140", "gen3_lite_2f"],
             description="Gripper to use",
         )
     )

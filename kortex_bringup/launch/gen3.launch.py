@@ -71,22 +71,23 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "gripper",
-            default_value="robotiq_2f_85",
+            default_value="",
             description="Name of the gripper attached to the arm",
-            choices=["robotiq_2f_85", "robotiq_2f_140"],
+            #choices=["robotiq_2f_85", "robotiq_2f_140"],
         )
     )
     declared_arguments.append(
         DeclareLaunchArgument(
             "gripper_joint_name",
-            default_value="robotiq_85_left_knuckle_joint",
+            default_value="",
+            #default_value="robotiq_85_left_knuckle_joint",
             description="Name of the gripper attached to the arm",
         )
     )
     declared_arguments.append(
         DeclareLaunchArgument(
             "use_internal_bus_gripper_comm",
-            default_value="true",
+            default_value="false",
             description="Use internal bus for gripper communication?",
         )
     )
